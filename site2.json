@@ -1,0 +1,274 @@
+[
+    {
+        "Boston Bruins": {
+            "Year": "1994",
+            "Wins": "27",
+            "Losses": "18",
+            "OT losses": "",
+            "Win%": "0.562",
+            "Goal For": "150",
+            "Goals Against": "127",
+            "+/-": "23"
+        },
+        "Buffalo Sabres": {
+            "Year": "1994",
+            "Wins": "22",
+            "Losses": "19",
+            "OT losses": "",
+            "Win%": "0.458",
+            "Goal For": "130",
+            "Goals Against": "119",
+            "+/-": "11"
+        },
+        "Calgary Flames": {
+            "Year": "1994",
+            "Wins": "24",
+            "Losses": "17",
+            "OT losses": "",
+            "Win%": "0.5",
+            "Goal For": "163",
+            "Goals Against": "135",
+            "+/-": "28"
+        },
+        "Chicago Blackhawks": {
+            "Year": "1994",
+            "Wins": "24",
+            "Losses": "19",
+            "OT losses": "",
+            "Win%": "0.5",
+            "Goal For": "156",
+            "Goals Against": "115",
+            "+/-": "41"
+        },
+        "Detroit Red Wings": {
+            "Year": "1994",
+            "Wins": "33",
+            "Losses": "11",
+            "OT losses": "",
+            "Win%": "0.688",
+            "Goal For": "180",
+            "Goals Against": "117",
+            "+/-": "63"
+        },
+        "Edmonton Oilers": {
+            "Year": "1993",
+            "Wins": "25",
+            "Losses": "45",
+            "OT losses": "",
+            "Win%": "0.298",
+            "Goal For": "261",
+            "Goals Against": "305",
+            "+/-": "-44"
+        },
+        "Hartford Whalers": {
+            "Year": "1993",
+            "Wins": "27",
+            "Losses": "48",
+            "OT losses": "",
+            "Win%": "0.321",
+            "Goal For": "227",
+            "Goals Against": "288",
+            "+/-": "-61"
+        },
+        "Los Angeles Kings": {
+            "Year": "1993",
+            "Wins": "27",
+            "Losses": "45",
+            "OT losses": "",
+            "Win%": "0.321",
+            "Goal For": "294",
+            "Goals Against": "322",
+            "+/-": "-28"
+        },
+        "Minnesota North Stars": {
+            "Year": "1992",
+            "Wins": "36",
+            "Losses": "38",
+            "OT losses": "",
+            "Win%": "0.429",
+            "Goal For": "272",
+            "Goals Against": "293",
+            "+/-": "-21"
+        },
+        "Montreal Canadiens": {
+            "Year": "1993",
+            "Wins": "41",
+            "Losses": "29",
+            "OT losses": "",
+            "Win%": "0.488",
+            "Goal For": "283",
+            "Goals Against": "248",
+            "+/-": "35"
+        },
+        "New Jersey Devils": {
+            "Year": "1993",
+            "Wins": "47",
+            "Losses": "25",
+            "OT losses": "",
+            "Win%": "0.56",
+            "Goal For": "306",
+            "Goals Against": "220",
+            "+/-": "86"
+        },
+        "New York Islanders": {
+            "Year": "1993",
+            "Wins": "36",
+            "Losses": "36",
+            "OT losses": "",
+            "Win%": "0.429",
+            "Goal For": "282",
+            "Goals Against": "264",
+            "+/-": "18"
+        },
+        "New York Rangers": {
+            "Year": "1993",
+            "Wins": "52",
+            "Losses": "24",
+            "OT losses": "",
+            "Win%": "0.619",
+            "Goal For": "299",
+            "Goals Against": "231",
+            "+/-": "68"
+        },
+        "Philadelphia Flyers": {
+            "Year": "1993",
+            "Wins": "35",
+            "Losses": "39",
+            "OT losses": "",
+            "Win%": "0.417",
+            "Goal For": "294",
+            "Goals Against": "314",
+            "+/-": "-20"
+        },
+        "Pittsburgh Penguins": {
+            "Year": "1993",
+            "Wins": "44",
+            "Losses": "27",
+            "OT losses": "",
+            "Win%": "0.524",
+            "Goal For": "299",
+            "Goals Against": "285",
+            "+/-": "14"
+        },
+        "Quebec Nordiques": {
+            "Year": "1993",
+            "Wins": "34",
+            "Losses": "42",
+            "OT losses": "",
+            "Win%": "0.405",
+            "Goal For": "277",
+            "Goals Against": "292",
+            "+/-": "-15"
+        },
+        "St. Louis Blues": {
+            "Year": "1993",
+            "Wins": "40",
+            "Losses": "33",
+            "OT losses": "",
+            "Win%": "0.476",
+            "Goal For": "270",
+            "Goals Against": "283",
+            "+/-": "-13"
+        },
+        "Toronto Maple Leafs": {
+            "Year": "1993",
+            "Wins": "43",
+            "Losses": "29",
+            "OT losses": "",
+            "Win%": "0.512",
+            "Goal For": "280",
+            "Goals Against": "243",
+            "+/-": "37"
+        },
+        "Vancouver Canucks": {
+            "Year": "1993",
+            "Wins": "41",
+            "Losses": "40",
+            "OT losses": "",
+            "Win%": "0.488",
+            "Goal For": "279",
+            "Goals Against": "276",
+            "+/-": "3"
+        },
+        "Washington Capitals": {
+            "Year": "1993",
+            "Wins": "39",
+            "Losses": "35",
+            "OT losses": "",
+            "Win%": "0.464",
+            "Goal For": "277",
+            "Goals Against": "263",
+            "+/-": "14"
+        },
+        "Winnipeg Jets": {
+            "Year": "1993",
+            "Wins": "24",
+            "Losses": "51",
+            "OT losses": "",
+            "Win%": "0.286",
+            "Goal For": "245",
+            "Goals Against": "344",
+            "+/-": "-99"
+        },
+        "San Jose Sharks": {
+            "Year": "1993",
+            "Wins": "33",
+            "Losses": "35",
+            "OT losses": "",
+            "Win%": "0.393",
+            "Goal For": "252",
+            "Goals Against": "265",
+            "+/-": "-13"
+        },
+        "Ottawa Senators": {
+            "Year": "1993",
+            "Wins": "14",
+            "Losses": "61",
+            "OT losses": "",
+            "Win%": "0.167",
+            "Goal For": "201",
+            "Goals Against": "397",
+            "+/-": "-196"
+        },
+        "Tampa Bay Lightning": {
+            "Year": "1993",
+            "Wins": "30",
+            "Losses": "43",
+            "OT losses": "",
+            "Win%": "0.357",
+            "Goal For": "224",
+            "Goals Against": "251",
+            "+/-": "-27"
+        },
+        "Mighty Ducks of Anaheim": {
+            "Year": "1994",
+            "Wins": "16",
+            "Losses": "27",
+            "OT losses": "",
+            "Win%": "0.333",
+            "Goal For": "125",
+            "Goals Against": "164",
+            "+/-": "-39"
+        },
+        "Dallas Stars": {
+            "Year": "1994",
+            "Wins": "17",
+            "Losses": "23",
+            "OT losses": "",
+            "Win%": "0.354",
+            "Goal For": "136",
+            "Goals Against": "135",
+            "+/-": "1"
+        },
+        "Florida Panthers": {
+            "Year": "1993",
+            "Wins": "33",
+            "Losses": "34",
+            "OT losses": "",
+            "Win%": "0.393",
+            "Goal For": "233",
+            "Goals Against": "233",
+            "+/-": "0"
+        }
+    }
+]
