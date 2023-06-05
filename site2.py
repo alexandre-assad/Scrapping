@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 import json
 
 
-dico = {}
+dico = []
 
 
 def transform_url(page):
@@ -21,22 +21,22 @@ def page_getter(page,dico):
     for equipe in equipes:
 
         try:
-            dico[equipe.find("td", class_="name").get_text(strip=True)] = {'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find("td", class_="ot-losses").get_text(
-                strip=True), 'Win%': equipe.find("td", class_="pct text-success").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-success").get_text(strip=True)}
+            dico.append({'Name':equipe.find("td", class_="name").get_text(strip=True), 'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find("td", class_="ot-losses").get_text(
+                strip=True), 'Win%': equipe.find("td", class_="pct text-success").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-success").get_text(strip=True)})
 
         except:
             try:
-                dico[equipe.find("td", class_="name").get_text(strip=True)] = {'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find(
-                    "td", class_="ot-losses").get_text(strip=True), 'Win%': equipe.find("td", class_="pct text-success").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-danger").get_text(strip=True)}
+                dico.append({'Name':equipe.find("td", class_="name").get_text(strip=True), 'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find(
+                    "td", class_="ot-losses").get_text(strip=True), 'Win%': equipe.find("td", class_="pct text-success").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-danger").get_text(strip=True)})
 
             except:
                 try:
-                    dico[equipe.find("td", class_="name").get_text(strip=True)] = {'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find(
-                        "td", class_="ot-losses").get_text(strip=True), 'Win%': equipe.find("td", class_="pct text-danger").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-success").get_text(strip=True)}
+                    dico.append({'Name':equipe.find("td", class_="name").get_text(strip=True),'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find(
+                        "td", class_="ot-losses").get_text(strip=True), 'Win%': equipe.find("td", class_="pct text-danger").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-success").get_text(strip=True)})
 
                 except:
-                    dico[equipe.find("td", class_="name").get_text(strip=True)] = {'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find(
-                        "td", class_="ot-losses").get_text(strip=True), 'Win%': equipe.find("td", class_="pct text-danger").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-danger").get_text(strip=True)}
+                    dico.append({'Name':equipe.find("td", class_="name").get_text(strip=True),'Year': equipe.find("td", class_="year").get_text(strip=True), 'Wins': equipe.find("td", class_="wins").get_text(strip=True), 'Losses': equipe.find("td", class_="losses").get_text(strip=True), 'OT losses': equipe.find(
+                        "td", class_="ot-losses").get_text(strip=True), 'Win%': equipe.find("td", class_="pct text-danger").get_text(strip=True), 'Goal For': equipe.find("td", class_="gf").get_text(strip=True), 'Goals Against': equipe.find("td", class_="ga").get_text(strip=True), '+/-': equipe.find("td", class_="diff text-danger").get_text(strip=True)})
     return dico
 def how_many_pages():
     page= 1
@@ -65,7 +65,7 @@ def how_many_pages():
           
 def get_page():
     data = []
-    dico = {}
+    dico = []
     for i in range(1,how_many_pages()+1):
         print(i)
         data = page_getter(i,dico)
