@@ -4,11 +4,14 @@ import json
 
 dico = []
 def transform_url(page):
-    res = requests.get(
-        url=f"https://www.scrapethissite.com/pages/ajax-javascript/#2013")
-    html = res.content
-    soup = bs(html, "lxml")
-    return soup
+    url=f"https://www.scrapethissite.com/pages/ajax-javascript/?ajax=true&year={2015-page}"
+    res = requests.get(url)
+    if not res.ok:
+        print(f'Code: {res.status_code},url: {url}')
+    else: 
+        html = res.content
+        soup = bs(html, "lxml")
+        return soup
 
 
 def json_dump(data):
@@ -16,14 +19,12 @@ def json_dump(data):
         json.dump([data], f, indent=4)
         
 def page_getter(page, dico):
-    films = transform_url(page).find_all("tr", class_="film")
-    for film in films:
-        best_pic = film.find("td",class_="film-best-picture ")
-        print(best_pic)
+    dico.append(json.loads(transform_url(page).get_text(strip=True)))
     return dico
 
-films = transform_url(3).find_all("tr", class_="film")
-for film in films:
-    best_pic = film.find("td",class_="film-best-picture ")
-    print(best_pic)
-            
+def scrap(dico):
+    for i in range(6):
+        dico = page_getter(i, dico)
+    json_dump(dico)
+
+scrap(dico)
