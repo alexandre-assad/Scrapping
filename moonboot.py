@@ -3,6 +3,13 @@ from bs4 import BeautifulSoup as bs
 import json
 
 dico = []
+def url_product(url):
+    res = requests.get(url,headers={'User-Agent': 'Mozilla/5.0'})
+    html = res.content
+    soup = bs(html, "lxml")
+    return soup
+
+
 def transform_url(gender,page):
     url=f"https://www.moonboot.com/fr-fr/shopping/{gender}?pageindex={page}"
     res = requests.get(url,headers={'User-Agent': 'Mozilla/5.0'})
@@ -31,7 +38,19 @@ def how_many_pages(gender):
             return page
         soup = transform_url(gender,page)
         
-        
-page5 = transform_url("man",3)
+def boot_scrap(url,dico):
+    page = url_product(url)  
+    name = page.find("h1",class_="e1994wwj3 css-1gdf8fv em8aoju0").get_text()
+    prix = page.find("span",class_="css-wwiaj0 exudj7t1").get_text()
+    dico.append({'Name':name,'Prix':prix})
+    return dico
+    
+def page_getter(gender,page,dico):
+    page = transform_url(gender,page)
+    boots = page.find_all("a",class_="css-umiid9 e11ql7691")
+    for boot in boots:
+        url = "https://www.moonboot.com" + boot["href"]
+        dico = boot_scrap(url,dico)
+    return dico
 
-print(how_many_pages("man"))
+print(page_getter("man",1,dico))
