@@ -29,7 +29,7 @@ def json_dump(data):
         
 
 def page_getter(page,dico):
-    tortue = transform_url_frame("Carettochelyidae")
+    tortue = transform_url_frame(page)
     dico.append({"Name":tortue.find("span",class_="family-name").get_text(strip=True),"Common Name":tortue.find("strong",class_="common-name").get_text(strip=True),"Description":tortue.find("p",class_="lead").get_text(strip=True)})
     return dico
 
