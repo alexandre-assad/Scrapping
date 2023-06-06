@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 import json
+import re
 
 dico = []
 def url_product(url):
@@ -39,9 +40,12 @@ def how_many_pages(gender):
         soup = transform_url(gender,page)
         
 def boot_scrap(url,dico):
-    page = url_product(url)  
+    page = url_product(url) 
     name = page.find("h1",class_="e1994wwj3 css-1gdf8fv em8aoju0").get_text()
-    prix = page.find("span",class_="css-wwiaj0 exudj7t1").get_text()
+    try:
+        prix = page.find("span",class_="css-wwiaj0 exudj7t1").get_text()
+    except:
+        prix = "Non disponible"
     dico.append({'Name':name,'Prix':prix})
     return dico
     
@@ -53,4 +57,11 @@ def page_getter(gender,page,dico):
         dico = boot_scrap(url,dico)
     return dico
 
-print(page_getter("man",1,dico))
+def scrape(dico):
+    genders = ["man",'woman']
+    for gender in genders:
+        for i in range(1,how_many_pages(gender)+1):
+            dico = page_getter(gender,i,dico)
+    json_dump(dico)
+    return dico
+print(scrape(dico))
