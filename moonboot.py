@@ -42,6 +42,7 @@ def how_many_pages(gender):
 def boot_scrap(url,dico):
     page = url_product(url) 
     name = page.find("h1",class_="e1994wwj3 css-1gdf8fv em8aoju0").get_text()
+    descriptions = page.find_all("script")
     try:
         prix = page.find("span",class_="css-wwiaj0 exudj7t1").get_text()
     except:
