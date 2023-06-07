@@ -43,11 +43,22 @@ def boot_scrap(url,dico):
     page = url_product(url) 
     name = page.find("h1",class_="e1994wwj3 css-1gdf8fv em8aoju0").get_text()
     descriptions = page.find_all("script")
+    net_description = "Aucune description"
+    #For the description, i'm force to regexp one big script 
+    for description in descriptions:
+        part_description = re.search("complementaryInformation",description.get_text())
+        end_description = re.search("u003Cbr",description.get_text())
+        if part_description != None and end_description != None:
+            brut_description = description.get_text()[part_description.span()[0]:end_description.span()[0]]
+            start_net_description = re.search("u003E",brut_description)
+            net_description = brut_description[start_net_description.span()[0]+5:len(brut_description)-1]
+            
+        
     try:
         prix = page.find("span",class_="css-wwiaj0 exudj7t1").get_text()
     except:
         prix = "Non disponible"
-    dico.append({'Name':name,'Prix':prix})
+    dico.append({'Name':name,'Prix':prix,'Description':net_description})
     return dico
     
 def page_getter(gender,page,dico):
